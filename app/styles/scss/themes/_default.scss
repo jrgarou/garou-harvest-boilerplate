@@ -1,0 +1,28 @@
+// -----------------------------------------------------------------------------
+// When having several themes, this file contains everything related to the
+// default one.
+// -----------------------------------------------------------------------------
+
+body {
+  background: AntiqueWhite;
+  color: DarkSalmon;
+}
+h1 {
+  @include sprite($android);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include tablet {
+    color: yellow;
+  }
+}
+
+p {
+  color: $brand-color;
+
+  @include tablet {
+    color: blue;
+  }
+}
