@@ -219,7 +219,8 @@ gulp.task('scaffold', function() {
 //  startup the web server,
 //  start up browserSync
 //  compress all scripts and SCSS files
-gulp.task('default', ['browserSync', 'sprite', 'scripts', 'styles'], function() {
+gulp.task('default', ['browserSync', 'sprite'], function() {
+    gulpSequence('sprite', 'scripts', 'styles');
     //a list of watchers, so it will watch all of the following files waiting for changes
     gulp.watch('app/sprites/**/*.png', ['sprite']);
     gulp.watch('app/scripts/src/**', ['scripts']);
