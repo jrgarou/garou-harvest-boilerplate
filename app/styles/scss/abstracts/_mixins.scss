@@ -2,6 +2,26 @@
 // This file contains all application-wide Sass mixins.
 // -----------------------------------------------------------------------------
 
+// media query
+
+@mixin mobile {
+  @media #{$mobile} {
+    @content
+  }
+};
+@mixin phablet {
+  @media #{$phablet} {
+    @content
+  }
+};
+
+@mixin tablet {
+  @media #{$tablet} {
+    @content
+  }
+};
+
+
 /// Event wrapper
 /// @author Harry Roberts
 /// @param {Bool} $self [false] - Whether or not to include current selector

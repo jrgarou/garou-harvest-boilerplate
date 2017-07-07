@@ -4,25 +4,41 @@
 // -----------------------------------------------------------------------------
 
 body {
-  background: AntiqueWhite;
-  color: DarkSalmon;
+  background-color: AntiqueWhite;
+
+  @include tablet {
+    background-color: AntiqueWhite;
+  }
+
+  @include phablet {
+    background-color: DarkSalmon;
+  }
+
+  @include mobile {
+    background-color: blue;
+  }
 }
+
 h1 {
   @include sprite($android);
 
   display: flex;
   justify-content: center;
   align-items: center;
-
-  @include tablet {
-    color: yellow;
-  }
 }
 
 p {
   color: $brand-color;
 
+  @include phablet {
+    background-color: green;
+  }
+
   @include tablet {
-    color: blue;
+    background-color: yellow;
+  }
+
+  @include mobile {
+    background-color: blue;
   }
 }
